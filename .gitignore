@@ -1,0 +1,7 @@
+.idea/*
+config/settings.py
+.DS_Store
+tests/.pytest_cache/*
+.*\.pyc$
+.*\.pytest_cache
+.*\.orig$
