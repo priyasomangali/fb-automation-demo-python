@@ -5,3 +5,4 @@ tests/.pytest_cache/*
 .*\.pyc$
 .*\.pytest_cache
 .*\.orig$
+git
