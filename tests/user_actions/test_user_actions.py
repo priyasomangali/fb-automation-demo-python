@@ -1,5 +1,6 @@
 from tests.user_actions.conftest import *
 
+
 class TestUserActions():
     driver = None
 
@@ -10,7 +11,9 @@ class TestUserActions():
         cls.home_page = HomePage(cls.driver)
 
     def test_add_post(self):
-        self.home_page.share_post(self.data_to_post)
+        posted_data = self.home_page.share_post(share_post_on_fb_data["plain_text_post"])
+        if posted_data == share_post_on_fb_data["plain_text_post"]:
+            assert True
 
     def test_add_empty_post(self):
         pass
@@ -32,4 +35,3 @@ class TestUserActions():
 
     def test_delete_post(self):
         pass
-

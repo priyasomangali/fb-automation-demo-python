@@ -1,4 +1,5 @@
 from tests.login.pages.login import LoginPage
+from tests.config.settings import *
 from selenium import webdriver
 import pytest
 
@@ -8,7 +9,7 @@ def driver(login=False):
     driver = webdriver.Chrome()
     driver.fullscreen_window()
     if login:
-        driver = LoginPage(driver).login()
+        driver = LoginPage(driver).login(username,password)
     return driver
 
 

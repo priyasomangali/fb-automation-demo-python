@@ -5,5 +5,10 @@ class HomePage(BaseClass):
 
     def share_post(self,post_data):
         self.click(home_btn_loc)
-        self.set_value(write_post_txt_loc,post_data)
+        import time
+        time.sleep(4)
+        self.click("//*[@data-referrer='pagelet_composer']//*[contains(@class,'clearfix')]")
+        self.set_value("//*[@data-testid='status-attachment-mentions-input']","priya")
         self.click(share_post_btn_loc)
+        posted_data = self.get_text("//*[contains(@class,'userContent')]//p")
+        return post_data
