@@ -5,6 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import *
 from selenium.webdriver.common.keys import Keys
+import os
 
 wait_time = 2
 xpath = 'xpath'
@@ -13,6 +14,7 @@ _id = 'id'
 link_text = 'linkText'
 tag = 'tag'
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 class BaseClass:
 
@@ -286,3 +288,6 @@ class BaseClass:
             except Exception as e:
                 print(e)
                 continue
+
+    def absolute_path(self, path):
+        return os.path.abspath(os.path.join(os.path.dirname(__file__), path))

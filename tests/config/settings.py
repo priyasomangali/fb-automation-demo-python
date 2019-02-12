@@ -2,7 +2,14 @@
 facebook_url = "https://facebook.com"
 
 # Set username
-username = "ihqwjyloog_1548181431@tfbnw.net"
+username_one = "ihqwjyloog_1548181431@tfbnw.net"
 
 # Set password
-password = "Qwert12345!!"
+password_one = "Qwert12345!!"
+
+
+# Set username
+username_two = "ipkvzrigyh_1549791423@tfbnw.net"
+
+# Set password
+password_two = "Qwert12345!!"
